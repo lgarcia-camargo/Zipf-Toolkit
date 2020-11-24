@@ -32,9 +32,13 @@ To run an example to generate a fequency csv file from a portion of the Brown co
 To generate statstical analysis of distribution do the following:
     enter R environment by entering 'R' into termninal.
     enter the folliwng command:
+    
       > source('getInfo.R')
+    
     follow input instructions:
+      
       Input name of file containing frequency table seperated by ','
+      
       Input what you would like the output file name to be.
     
     The output file will contain analytical information 
