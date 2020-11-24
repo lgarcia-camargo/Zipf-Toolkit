@@ -39,7 +39,7 @@ To generate statstical analysis of distribution do the following:
       
       Input name of file containing frequency table seperated by ','
       
-      Input what you would like the output file name to be.
+      Input desired name for output file.
     
     The output file will contain statistical analysis of frequency distribution.
       
