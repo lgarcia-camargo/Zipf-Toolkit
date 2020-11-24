@@ -21,7 +21,7 @@ To setup the directory for the project do the following steps as necessary:
   In repository directory run the command to install the necessary python packages:
     $ make setup
     
-  In repository enter R environment and install the "poweRlaw" package using the following commands and following the package directions:
+  In repository create a R shell and install the "poweRlaw" package using the following commands and continue by following the package directions:
     $ R
     > install.packages('poweRlaw')
     
