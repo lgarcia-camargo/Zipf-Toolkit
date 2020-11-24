@@ -44,6 +44,7 @@ To generate statstical analysis of distribution do the following:
     The output file will contain statistical analysis of frequency distribution.
       
 Other commands in terminal:
+
     Create a frequency vs rank log-log plot given a file containing a words and frequencies:
        $ make create
     
