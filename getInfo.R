@@ -64,7 +64,9 @@ compare_dist <- function(data_file, name, iters){
 }
 
 get_info <- function(data_file, name, iters){
-	
+
+
+
 	fileConn <- file(name, open='a')
     	data <- read.csv(file=data_file, sep=",", colClasses=c("NULL", NA), header=F)
     	data <- data[,1]
@@ -72,11 +74,11 @@ get_info <- function(data_file, name, iters){
     	est = estimate_xmin(m_pl)
     	m_pl$setXmin(est)
 
-	write(c("Xmax:",data[1],''),fileConn)
+	write(c("Xmax:",max(data),''),fileConn)
     	print("Xmax")
 	print(data[1])
 
-	write(c("Xmin:",est$xmin,''),fileConn,append=TRUE, sep="\n\n")
+	write(c("Xmin:",str(est),''),fileConn,append=TRUE, sep="\n\n")
 	print("Xmin")
 	print(est)
 	
