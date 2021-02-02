@@ -33,6 +33,7 @@ To generate statstical analysis of distribution do the following:
     enter R environment by entering 'R' into termninal.
     enter the folliwng command:
     
+    
       > source('getInfo.R')
     
     follow input instructions:
@@ -45,7 +46,7 @@ To generate statstical analysis of distribution do the following:
       
 Other commands in terminal:
 
-    Create a frequency vs rank log-log plot given a file containing a words and frequencies:
+    Create a frequency vs rank log-log plot given a file containing words and frequencies:
        $ make create
     
     Tokenized a text file using nltk and create a csv file containing words and given frequencies:
