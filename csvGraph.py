@@ -86,11 +86,7 @@ def example():
 
 def create_display():
     filename = input('File name: ')
-    text = get_data(filename)
-    lst = nltk_tokenizer(text)
-    dct = get_frequencies(lst)    
-    make_file(dct,filename)
-    display(filename+'.csv')
+    display(filename)
 
 
 
