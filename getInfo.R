@@ -8,6 +8,7 @@ analyze_data <- function(data_file, name, iters){
     	m_pl = displ$new(data)
     	est = estimate_xmin(m_pl)
     	m_pl$setXmin(est)
+	
 
     	print("m_pl fit")
     	print(m_pl)
@@ -54,13 +55,13 @@ compare_dist <- function(data_file, name, iters){
 	print("Pois")
 	print(comp_pois$p_two_sided)
 	print(comp_pois$test_statistic)
-	write(c("Lnorm:",'p:',comp_pois$p_two_sided,'q:',comp_pois$test_statistic,''),fileConn,append=TRUE)
+	write(c("Pois:",'p:',comp_pois$p_two_sided,'q:',comp_pois$test_statistic,''),fileConn,append=TRUE)
 
 
 	print("Exp")
 	print(comp_exp$p_two_sided)
 	print(comp_exp$test_statistic)
-	write(c("Lnorm:",'p:',comp_exp$p_two_sided,'q:',comp_exp$test_statistic,''),fileConn,append=TRUE)
+	write(c("Exp:",'p:',comp_exp$p_two_sided,'q:',comp_exp$test_statistic,''),fileConn,append=TRUE)
 }
 
 get_info <- function(data_file, name, iters){
@@ -76,7 +77,7 @@ get_info <- function(data_file, name, iters){
 
 	write(c("Xmax:",max(data),''),fileConn)
     	print("Xmax")
-	print(data[1])
+	print(max(data))
 
 	write(c("Xmin:",str(est),''),fileConn,append=TRUE, sep="\n\n")
 	print("Xmin")
@@ -87,11 +88,9 @@ get_info <- function(data_file, name, iters){
 	print(sum(data))
 }
 
-
 current_data <- readline(prompt="Data_file_name: ")
 results_file <- readline(prompt="Results_file_name: ")
 get_info(current_data,results_file)
 analyze_data(current_data, results_file, 5000)
 compare_dist(current_data, results_file)
-
 
