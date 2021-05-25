@@ -46,7 +46,7 @@ Post: Creates and prints to a .csv file using '~' as separator.
 '''
 def make_file(dct,filename):
     f = open(filename+'.csv','w+' )
-    for word in dct: f.write(word+ ' '+ str(dct[word])+'\n')
+    for word in dct: f.write(word.replace(',', '')+ ','+ str(dct[word])+'\n')
 
 
 '''
@@ -54,7 +54,7 @@ Pre: Takes in a .csv file.
 Post: Dislpays the log-log plot associated with .csv file.
 '''     
 def display(file_name):
-    fil = pd.read_csv(file_name,sep=' ',names=['words','frequencies'], engine='python')
+    fil = pd.read_csv(file_name,sep=',',names=['words','frequencies'], engine='python')
     fil.sort_values(by='frequencies',ascending=False, inplace=True)
     fil.reset_index(inplace=True)
     fil.index += 1
