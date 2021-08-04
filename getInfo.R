@@ -79,9 +79,9 @@ get_info <- function(data_file, name, iters){
     	print("Xmax")
 	print(max(data))
 
-	write(c("Xmin:",str(est),''),fileConn,append=TRUE, sep="\n\n")
+	write(c("Xmin:",m_pl$xmin,''),fileConn,append=TRUE, sep="\n\n")
 	print("Xmin")
-	print(est)
+	print(m_pl$xmin)
 	
 	write(c("Word count:",sum(data),''),fileConn,append=TRUE, sep="\n\n")
 	print("Word count")
